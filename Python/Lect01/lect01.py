@@ -82,3 +82,7 @@ for i in range(1,10,2):
 
 for i in 'Hello World!':
     print(i)
+
+x = 11
+if 5 < x < 9:
+    print(x)
