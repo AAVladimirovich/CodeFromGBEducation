@@ -1,1 +1,10 @@
 print ('Hello World')
+
+print('Введите а')
+a = int(input()) 
+print('Введите b')
+b = int(input())
+print('Введите c')
+c = int(input())
+print(a, ' + ', b, ' + ',c, ' = ', a+b+c) 
+print('{} + {} = {}'.format(a, b, c))
