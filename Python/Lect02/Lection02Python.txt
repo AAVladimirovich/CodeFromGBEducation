@@ -1,0 +1,5 @@
+line 1
+line 2
+redgreenblue
+Lection02Python.txt
+Скрипт создания и заполнения файла находится в Lect02/Lection02.py
