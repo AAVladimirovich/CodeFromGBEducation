@@ -21,3 +21,11 @@ for line in data: # перебираем файл по строкам и печ�
 data.close()
 
 print(ClassHolder.f(1)) #используем функцию из ClassHolder
+
+# with open(path, 'w') as data: #открываем файл для изменения 'w' - значит перезапись - изменяем содержимое с чистого листа
+#     for i in range(len(listForAction)):
+#         if listForAction[i] == 0:
+#             data.write(f'{listForAction[i+1]}\n')
+#         else:
+#             data.write(f'{listForAction[i]}\n')
+# data.close()
