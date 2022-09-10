@@ -10,6 +10,7 @@ data.writelines(colors) # разделителей не будет
 data.write('\n')
 data.write(data.name)
 data.write('\n')
+data.write('Скрипт создания и заполнения файла находится в Lect02/Lection02.py')
 # data.write(str(help(data)))
 data.close() 
 
