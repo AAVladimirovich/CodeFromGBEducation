@@ -11,10 +11,8 @@ def reshalo(argn):
     return round((1 + (1/argn)) ** argn,2)
 
 list = []
-summ = 0
 for i in range(1, n+1):
     list.append(reshalo(i))
-    summ += list[i-1]
 
-print(list)
-print(f'сумма последовательности = {summ}')
+print(f'последовательность чисел = {list}')
+print(f'сумма последовательности = {sum(list,0)}')
