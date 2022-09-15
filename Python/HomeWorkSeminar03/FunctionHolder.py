@@ -14,3 +14,19 @@ def get_fractional_part(arg_number):
         return
     else:
         return fractional_part
+
+
+def to_decimal(arg_number):
+    if arg_number == 1:
+        return 1
+    elif arg_number == 0:
+        return 0
+    return arg_number % 2 + 10 * to_decimal(arg_number // 2)
+
+
+def to_basenum_system_conversion(arg_number, basenum):
+    if arg_number == 1:
+        return 1
+    elif arg_number == 0:
+        return 0
+    return arg_number % basenum + 10 * to_basenum_system_conversion(arg_number // basenum, basenum)
