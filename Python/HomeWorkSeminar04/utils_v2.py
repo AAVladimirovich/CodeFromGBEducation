@@ -1,3 +1,6 @@
+import random
+import re
+
 
 # функция определения числа, чётного или нет
 def is_it_odd(arg_number):
@@ -105,17 +108,50 @@ def write_to_file(arg_filename, arg_data, arg_write_func: str = 'a'):
     # открываем файл для изменения 'r' - значит чтение содержимого файла
     if arg_write_func == 'w' or arg_write_func == 'a':
         with open(arg_filename, arg_write_func) as data:
-            data.write('\n')
             data.write(arg_data)
+            data.write('\n')
         data.close()
 
 
 # функция чтения из файла
-def read_from_file(arg_filename):
+def read_from_file(arg_filename, return_required: bool = False):
+    string_to_return = ''
     data = open(arg_filename)  # открываем файл для чтения
     for line in data:  # перебираем файл по строкам и печатаем
         print(line)
+        string_to_return += line
     data.close()
+    if return_required:
+        return string_to_return
+
+
+# функция задачи рандомного многочлена, дичь лютая конечно
+def polynomial(arg_koef, arg_max_rnd: int = 100):
+    a = int(random.randint(1, arg_max_rnd))
+    b = int(random.randint(1, arg_max_rnd))
+    c = int(random.randint(1, arg_max_rnd))
+
+    if a != 0:
+        first = (str(a) + "x^" + str(arg_koef) + " + ")
+    else:
+        first = (str())
+
+    if b != 0:
+        second = (str(b) + "x" + " + ")
+    else:
+        second = (str())
+
+    if c != 0:
+        third = (str(c) + " = 0")
+    else:
+        third = (str())
+
+    return first + second + third
+
+
+#посмотрел в интернете позволяет очистить строку от разных символов, заменить на " " указано до определения Word.strip()
+def clean(word):
+    return re.sub(r"[`x^+=!?.:;,'\"()-]", " ", word.strip())
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
