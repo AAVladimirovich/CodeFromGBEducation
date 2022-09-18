@@ -7,7 +7,7 @@ def is_it_odd(arg_number):
         return False
 
 
-#функция возврата дробной части
+# функция возврата дробной части
 def get_fractional_part(arg_number):
     whole_part = arg_number // 1
     fractional_part = round(arg_number - whole_part, 5)
@@ -16,7 +16,7 @@ def get_fractional_part(arg_number):
     else:
         return fractional_part
 
-#функция преобразования в двоичный код
+# функция преобразования в двоичный код
 def to_decimal(arg_number):
     if arg_number == 1:
         return 1
@@ -24,7 +24,7 @@ def to_decimal(arg_number):
         return 0
     return arg_number % 2 + 10 * to_decimal(arg_number // 2)
 
-#функция преобразования в код заданный basenum - ограничение 2 до 9 наверное.
+# функция преобразования в код заданный basenum - ограничение 2 до 9 наверное.
 def to_basenum_system_conversion(arg_number, basenum):
     if arg_number == 1:
         return 1
@@ -48,7 +48,7 @@ def negafibonacci(arg_number):
             return negafibonacci(arg_number + 1) + negafibonacci(arg_number + 2)
 
 
-#определение наименьшего общего делителя???
+# определение наименьшего общего делителя???
 def nod(a, b):
     if b == 0:
         return a
@@ -56,12 +56,12 @@ def nod(a, b):
         return nod(b, a % b)
 
 
-#функция определения наименьшего общего кратного
+# функция определения наименьшего общего кратного
 def nok(a, b):
     return int(a * b) / nod(a, b)
 
 
-#функция решета Эратосфена
+# функция решета Эратосфена
 def sieve_list(arg_int):
     sieve = set(range(2, arg_int+1))
     prime_list = []
@@ -76,7 +76,7 @@ def sieve_list(arg_int):
     return prime_list
 
 
-#функция возвращения уникальных значений из списка
+# функция возвращения уникальных значений из списка
 def get_unique_numbers(numbers):
     unique = []
     for number in numbers:
@@ -84,6 +84,38 @@ def get_unique_numbers(numbers):
             unique.append(number)
     return unique
 
+
+# проверка ввода
+def key_check(arg_string, arg_wich_check='int', arg_len=15):
+    if any([i > 'z' or i < 'a' for i in arg_string]) and arg_wich_check == 'string':
+        print(f'Error: Contains illegal characters, not {arg_wich_check}')
+        return False
+    if any([i > '9' or i < '0' for i in arg_string]) and arg_wich_check == 'int':
+        print(f'Error: Contains illegal characters, not {arg_wich_check}')
+        return False
+    elif len(arg_string) > arg_len:
+        print("Very long string")
+    return True
+
+
+# функция работы с файлом, когда-нибудь переделать правильнее, может распределить отдельно на запись и на чтение
+def write_to_file(arg_filename, arg_data, arg_write_func: str = 'a'):
+    # открываем файл для изменения 'w' - значит перезапись - изменяем содержимое с чистого листа
+    # открываем файл для изменения 'a' - значит добавление - добовляем содержимое в файл
+    # открываем файл для изменения 'r' - значит чтение содержимого файла
+    if arg_write_func == 'w' or arg_write_func == 'a':
+        with open(arg_filename, arg_write_func) as data:
+            data.write('\n')
+            data.write(arg_data)
+        data.close()
+
+
+# функция чтения из файла
+def read_from_file(arg_filename):
+    data = open(arg_filename)  # открываем файл для чтения
+    for line in data:  # перебираем файл по строкам и печатаем
+        print(line)
+    data.close()
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
