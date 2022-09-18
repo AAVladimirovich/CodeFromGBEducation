@@ -76,6 +76,15 @@ def sieve_list(arg_int):
     return prime_list
 
 
+#функция возвращения уникальных значений из списка
+def get_unique_numbers(numbers):
+    unique = []
+    for number in numbers:
+        if number not in unique:
+            unique.append(number)
+    return unique
+
+
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
 
