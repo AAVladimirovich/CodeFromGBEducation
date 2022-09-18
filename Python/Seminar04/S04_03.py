@@ -2,14 +2,10 @@
 
 print('*PyCharm*. Напишите программу, удаляющую из текста все слова, содержащие "абв".')
 print('*' * 16, 'Решение', '*' * 16)
-task_string = 'asdfkksdgj;askdjg;hasdsdfghlsasdfhlakasdhaasdsdhgljka'
+task_string = 'абввафожвылоабвлдмоджлвоаабвжлофжывлпофабв'
 print(f'строка условия задачи = {task_string}')
-print('Задайте строку поиска')
-# string = str(input())
-string = 'asd'
-
-answer = "ввввввввв".join(task_string.split(string))
-
-print(f'ответ = {task_string.split(string)}')
+find_string = 'абв'
+answer = "".join(task_string.split(find_string))
+# answer = "*".join(task_string.split(string))
+# print(f'ответ = {task_string.split(find_string)}')
 print(f'ответ = {answer}')
-
