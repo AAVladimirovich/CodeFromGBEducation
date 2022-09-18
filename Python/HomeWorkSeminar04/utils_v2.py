@@ -47,6 +47,38 @@ def negafibonacci(arg_number):
         else:
             return negafibonacci(arg_number + 1) + negafibonacci(arg_number + 2)
 
+
+#определение наименьшего общего делителя???
+def nod(a, b):
+    if b == 0:
+        return a
+    else:
+        return nod(b, a % b)
+
+
+#функция определения наименьшего общего кратного
+def nok(a, b):
+    return int(a * b) / nod(a, b)
+
+
+#функция решета Эратосфена
+def sieve_list(arg_int):
+    sieve = set(range(2, arg_int+1))
+    prime_list = []
+    while sieve:
+        prime = min(sieve)
+        prime_list.append(prime)
+        #print(sieve)
+        #print(prime)
+        sieve -= set(range(prime, arg_int + 1, prime))
+        #print(sieve)
+    #print(prime_list)
+    return prime_list
+
+
+# list comprehansion
+# [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
+
 # мусорка. когда-нибудь разобрать
 # void Fibonacci(int in_num)
 # {
@@ -63,3 +95,16 @@ def negafibonacci(arg_number):
 #         Console.WriteLine($"F({i}) = {sum}");
 #     }
 # }
+
+# #функция определения простых множителей числа
+# def pmc(arg_number):
+#     pmc_list = []
+#     while arg_number != 1:
+#         prime_list = sieve_list(arg_number)
+#         first_min_prime = False
+#         for current_prime in prime_list:
+#             if arg_number % current_prime == 0 and first_min_prime == False:
+#                 first_min_prime = True
+#                 pmc_list.append(current_prime)
+#                 pmc(arg_number / current_prime)
+#                 return pmc_list.append(current_prime)
