@@ -15,7 +15,7 @@ def bot_logic(arg_total_sweets):
     target = 29
     if arg_total_sweets <= 56:
         if arg_total_sweets == target:
-            return random.randrange(1, arg_total_sweets-1)
+            return random.randrange(1, 28)
         elif arg_total_sweets < target:
             return arg_total_sweets
         else:
@@ -28,49 +28,50 @@ def bot_logic(arg_total_sweets):
 def sixth_sense(arg_total_sweets):
     if arg_total_sweets > 56:
         sense_choice = arg_total_sweets - ((arg_total_sweets // 28) * 28)-1
-        if sense_choice < 0:
-            sense_choice = 1
-        print(f"****** Что-то подсказывает тебе взять {sense_choice} конфет ******")
-    if 28 < arg_total_sweets <= 56:
-        print(f"****** Что-то подсказывает тебе взять {arg_total_sweets - 29} конфет ******")
+    elif 28 < arg_total_sweets <= 56:
+        sense_choice = arg_total_sweets - 29
     elif arg_total_sweets <= 28:
-        print(f"****** Что-то подсказывает тебе взять {arg_total_sweets} конфет ******")
+        sense_choice = arg_total_sweets
+    if sense_choice <= 0:
+        print(f"****** Противник играет по серьёзному, твои чувства молчат ******")
+    else:
+        print(f"****** Что-то подсказывает тебе взять {sense_choice} конфет ******")
 
 
-# инверсируем ход для передачи
+# инверсия переменной хода
 def change_turn(arg_turn):
     return arg_turn ^ True
 
 
 # проверка победителя
-def check_win(total_sweets, player_turn):
-    if player_turn == True and total_sweets <= 0:
+def check_win(arg_total_sweets, arg_player_turn):
+    if arg_player_turn and arg_total_sweets <= 0:
         print(f'Победил игрок !!!!!!')
-    elif player_turn == False and total_sweets <= 0:
+    elif not arg_player_turn and arg_total_sweets <= 0:
         print(f'Победил AI !!!!!')
 
 
 # логика игры
-def game(arg_ttls_sweets, arg_pl_turn):
-    while arg_ttls_sweets > 0:
+def game(arg_ttl_sweets, arg_pl_turn):
+    while arg_ttl_sweets > 0:
         if arg_pl_turn:
-            sixth_sense(arg_ttls_sweets)
+            sixth_sense(arg_ttl_sweets)
             player_choice = int(input('Сколько конфет возьмёт игрок? '))
             while not 0 < player_choice < 29:
                 player_choice = int(input('конфет можно взять от 1 до 28, введите повторно '))
             print(f'игрок взял = {player_choice} конфет')
-            arg_ttls_sweets -= player_choice
+            arg_ttl_sweets -= player_choice
         else:
-            bot_choice = bot_logic(arg_ttls_sweets)
+            bot_choice = bot_logic(arg_ttl_sweets)
             print(f'бот взял = {bot_choice} конфет')
-            arg_ttls_sweets -= bot_choice
-        print(f'конфет осталось = {arg_ttls_sweets}')
-        check_win(arg_ttls_sweets, arg_pl_turn)   # проверка на выигрышь
+            arg_ttl_sweets -= bot_choice
+        print(f'конфет осталось = {arg_ttl_sweets}')
+        check_win(arg_ttl_sweets, arg_pl_turn)   # проверка на выигрышь
         arg_pl_turn = change_turn(arg_pl_turn)   # смена хода
 
 
 # ниже приведены инициализирующие параметры, определения конфет, определения хода
-total_sweets = 2021
+total_sweets = 56
 print(
     '"Игра с конфетами"\n'
     'В игре участвуют игрок и бот\n'
@@ -84,8 +85,8 @@ print(
 
 player_turn = random.randrange(2)
 if player_turn:
-    print('Первым ход делает игрок')
+    print('****** Первым ход делает игрок ******')
 else:
-    print('Первым ход делает бот')
+    print('****** Первым ход делает бот ******')
 
-game(total_sweets, player_turn) # запуск игры
+game(total_sweets, player_turn)  # запуск игры
