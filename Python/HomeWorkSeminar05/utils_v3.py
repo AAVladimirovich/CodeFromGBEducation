@@ -158,6 +158,14 @@ def clean(word):
 def inverse_bit(arg_bit):
     return arg_bit ^ True
 
+
+# проверка на наличие индекса в листе
+def is_exist(arg_list, arg_index):
+    try:
+        arg_value = int(arg_list[arg_index])
+    except IndexError:
+        print(f'Index {arg_index} отсутствует в листе {arg_list}')
+
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
 
