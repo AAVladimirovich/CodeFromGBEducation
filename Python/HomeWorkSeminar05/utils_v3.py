@@ -162,12 +162,16 @@ def inverse_bit(arg_bit):
 # проверка на наличие индекса в листе
 def is_exist(arg_list, arg_index):
     try:
-        arg_value = int(arg_list[arg_index])
+        return int(arg_list[arg_index])
     except IndexError:
-        print(f'Index {arg_index} отсутствует в листе {arg_list}')
+        print(f'Index {arg_index} отсутствует в листе {arg_list}') # при ошибке возвращает NoneType - можно отлавливать
+        #  return 0
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
+# [answer_list.append(task_list[i]) for i in range(len(task_list)) if task_list[i] < hh.is_exist(task_list, i + 1)]
+# if type(hh.is_exist(task_list, i + 1)) != type(None):
+# if not isinstance(hh.is_exist(task_list, i + 1), type(None)):
 
 # мусорка. когда-нибудь разобрать
 # void Fibonacci(int in_num)
