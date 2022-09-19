@@ -149,9 +149,14 @@ def polynomial(arg_koef, arg_max_rnd: int = 100):
     return first + second + third
 
 
-#посмотрел в интернете позволяет очистить строку от разных символов, заменить на " " указано до определения Word.strip()
+# посмотрел в интернете позволяет очистить строку от разных символов, заменить на " " указано до определения Word.strip()
 def clean(word):
     return re.sub(r"[`x^+=!?.:;,'\"()-]", " ", word.strip())
+
+
+# функция инверсии бита
+def inverse_bit(arg_bit):
+    return arg_bit ^ True
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
