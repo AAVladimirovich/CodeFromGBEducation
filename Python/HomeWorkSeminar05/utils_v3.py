@@ -172,6 +172,8 @@ def is_exist(arg_list, arg_index):
 # [answer_list.append(task_list[i]) for i in range(len(task_list)) if task_list[i] < hh.is_exist(task_list, i + 1)]
 # if type(hh.is_exist(task_list, i + 1)) != type(None):
 # if not isinstance(hh.is_exist(task_list, i + 1), type(None)):
+# if type(hh.get_fractional_part(item)) is float:
+# [print(f'{count + i}) свободные клетки поля a{i+1} ') for i in range(len(arg_lines[0])) if arg_lines[0][i] == '   ']
 
 # мусорка. когда-нибудь разобрать
 # void Fibonacci(int in_num)
