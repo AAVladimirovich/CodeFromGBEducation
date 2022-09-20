@@ -100,7 +100,7 @@ while not victory:
     player_num = n % 2 + 1
     choice_menu_list = menu_turn(field_list)
     x = input(f'Ход {player_num} игрока. Сделайте выбор от 1 до {len(choice_menu_list)} ')
-    while 0 > int(x) < len(choice_menu_list)-1:
+    while int(x) > len(choice_menu_list) or int(x) < 1:
         x = input(f'Ход {player_num} игрока. Сделайте выбор от 1 до {len(choice_menu_list)} ')
     field_list = make_turn(n, choice_menu_list[int(x)-1], field_list)
     prepare_field(lines_h, lines_v, field_list)
