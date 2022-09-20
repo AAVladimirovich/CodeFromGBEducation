@@ -118,8 +118,9 @@ def read_from_file(arg_filename, return_required: bool = False):
     string_to_return = ''
     data = open(arg_filename)  # открываем файл для чтения
     for line in data:  # перебираем файл по строкам и печатаем
-        print(f'значение строки внутри файла {arg_filename} : {line}')
-        string_to_return += line
+        if line != '\n':
+            print(f'значение строки внутри файла {arg_filename} : {line}')
+            string_to_return += line
     data.close()
     if return_required:
         return string_to_return
@@ -166,6 +167,53 @@ def is_exist(arg_list, arg_index):
     except IndexError:
         print(f'Index {arg_index} отсутствует в листе {arg_list}') # при ошибке возвращает NoneType - можно отлавливать
         #  return 0
+
+
+# функция кодирования в RLE
+def rle_encode(data):
+    encoding = ''
+    prev_char = ''
+    count = 0
+
+    if not data:
+        return ''
+
+    for char in data:
+        # If the prev and current characters
+        # don't match...
+        if char != prev_char:
+            # ...then add the count and character
+            # to our encoding
+            if prev_char:
+                encoding += str(count) + prev_char
+            count = 1
+            prev_char = char
+        else:
+            # Or increment our counter
+            # if the characters do match
+            count += 1
+    else:
+        # Finish off the encoding
+        encoding += str(count) + prev_char
+        return encoding
+
+
+# функция декодирования с RLE
+def rle_decode(data):
+    decode = ''
+    count = ''
+    for char in data:
+        # If the character is numerical...
+        if char.isdigit():
+            # ...append it to our count
+            count += char
+        else:
+            # Otherwise we've seen a non-numerical
+            # character and need to expand it for
+            # the decoding
+            decode += char * int(count)
+            count = ''
+    return decode
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
