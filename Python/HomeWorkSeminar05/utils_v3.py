@@ -218,10 +218,23 @@ def rle_decode(data):
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
 # [answer_list.append(task_list[i]) for i in range(len(task_list)) if task_list[i] < hh.is_exist(task_list, i + 1)]
+# [print(f'{count + i}) свободные клетки поля a{i+1} ') for i in range(len(arg_lines[0])) if arg_lines[0][i] == '   ']
+# [count_list.append(f'a{i + 1}') for i, val in enumerate(arg_lines[0], start=0) if val == '   ']
+# [print(f'{len(count_list) - len(count_list) + i + 1}) свободные клетки поля a{i + 1} ') for i, val in enumerate(arg_lines[0], start=0) if val
+
+# использование map, lambda, filter
+# def lambda_la(x):
+#     if 'абв' not in x:
+#         return x
+#
+# answer_list3 = list(map(lambda_la, task_string2.split(' ')))
+# answer_list2 = ' '.join(list(filter(lambda_la, task_string2.split(' '))))
+# answer_list = ' '.join(list(filter(lambda x: 'абв' not in x, task_string2.split(' '))))
+
+# проверка на тип переменной
 # if type(hh.is_exist(task_list, i + 1)) != type(None):
 # if not isinstance(hh.is_exist(task_list, i + 1), type(None)):
 # if type(hh.get_fractional_part(item)) is float:
-# [print(f'{count + i}) свободные клетки поля a{i+1} ') for i in range(len(arg_lines[0])) if arg_lines[0][i] == '   ']
 
 # мусорка. когда-нибудь разобрать
 # void Fibonacci(int in_num)
