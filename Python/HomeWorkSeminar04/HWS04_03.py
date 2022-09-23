@@ -6,7 +6,8 @@ import utils_v2 as hh  # hh - homework helper
 print('*PyCharm*. Задайте последовательность чисел. Напишите программу, которая выведет список')
 print('*PyCharm*. неповторяющихся элементов исходной последовательности.')
 print('*' * 16, 'Решение', '*' * 16)
-homework_list = [1, 1, 2, 3, 4, 4, 5, 5, 6, 3, 4, 7, 8, 9, 5, 6]
+homework_list = [1, 1, 2, 3, 4, 4, 5, 5, 3, 4, 7, 8, 9, 5, 6]
 print(f'Последовательность чисел задания = {homework_list}')
 answer_list = hh.get_unique_numbers(homework_list)
+print (f'set функция = {set(homework_list)}')
 print(f'список уникальных значений = {answer_list}')
