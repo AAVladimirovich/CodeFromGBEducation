@@ -2,7 +2,6 @@
 # простых множителей числа N.
 
 import utils_v2 as hh  # hh - homework helper
-import math
 
 
 print('*PyCharm*. Задайте натуральное число N. Напишите программу, которая составит список')
@@ -21,7 +20,7 @@ while n != 1:
             answer_list.append(current_prime)
             n = int(n / current_prime)
 
-print(f'Список Простых множители числа {answer_list}')
+print(f'Список простых множителeй числа {answer_list}')
 
 answer_string = ''
 while answer_list:
