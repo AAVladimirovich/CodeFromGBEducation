@@ -21,6 +21,12 @@ hh.write_to_file("HWS05_01.txt", task_string, 'w')
 work_list = hh.read_from_file("HWS05_01.txt", True)   # получаем строку с файла и присваиваем стринговой переменной
 work_list = work_list.split()   # разбиваем полученую строку по пробелам и переводим её в лист
 print(f'Лист полученный с файла {work_list}')
+
+enum_list = []
+[enum_list.append(val) for val in enumerate(work_list, start=0)]
+print(f'enum_list = {enum_list}')
+[print(f'найдено несоответствие в числе =  {i}') for i, val in enum_list if i != int(val)]
+
 current_number = 0
 next_number = 0
 for i in range(len_of_list):
