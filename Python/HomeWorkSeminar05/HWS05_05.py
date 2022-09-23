@@ -1,7 +1,7 @@
 # Создайте программу для игры в "Крестики-нолики".
 
 
-#функция вызова меню ходов
+# функция вызова меню ходов
 def menu_turn(arg_lines):
     count = 1
     count_list = []
@@ -59,28 +59,14 @@ def prepare_field(arg_lines_h, arg_lines_v, arg_field_list):
 # определение победителя
 def check_victory(arg_turn, arg_field_list):
     marker = ' X ' if arg_turn % 2 == 0 else ' O '
-    if arg_field_list[0][0] == marker and arg_field_list[1][0] == marker and arg_field_list[2][0] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[0][1] == marker and arg_field_list[1][1] == marker and arg_field_list[2][1] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[0][2] == marker and arg_field_list[1][2] == marker and arg_field_list[2][2] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[0][0] == marker and arg_field_list[0][1] == marker and arg_field_list[0][2] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[1][0] == marker and arg_field_list[1][1] == marker and arg_field_list[1][2] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[2][0] == marker and arg_field_list[2][1] == marker and arg_field_list[2][2] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[0][0] == marker and arg_field_list[1][1] == marker and arg_field_list[2][2] == marker:
-        print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
-        return True
-    elif arg_field_list[0][2] == marker and arg_field_list[1][1] == marker and arg_field_list[2][0] == marker:
+    if arg_field_list[0][0] == marker and arg_field_list[1][0] == marker and arg_field_list[2][0] == marker or \
+            arg_field_list[0][1] == marker and arg_field_list[1][1] == marker and arg_field_list[2][1] == marker or \
+            arg_field_list[0][2] == marker and arg_field_list[1][2] == marker and arg_field_list[2][2] == marker or \
+            arg_field_list[0][0] == marker and arg_field_list[0][1] == marker and arg_field_list[0][2] == marker or \
+            arg_field_list[1][0] == marker and arg_field_list[1][1] == marker and arg_field_list[1][2] == marker or \
+            arg_field_list[2][0] == marker and arg_field_list[2][1] == marker and arg_field_list[2][2] == marker or \
+            arg_field_list[0][0] == marker and arg_field_list[1][1] == marker and arg_field_list[2][2] == marker or \
+            arg_field_list[0][2] == marker and arg_field_list[1][1] == marker and arg_field_list[2][0] == marker:
         print(f'Игрок {n % 2 + 1} победил. Победила команда {marker} ')
         return True
 
