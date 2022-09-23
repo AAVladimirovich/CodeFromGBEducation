@@ -22,7 +22,7 @@ string_polynomial_two = hh.read_from_file('HWS04_05_02.txt', True)
 
 string_polynomial_one = string_polynomial_one.split()
 print(f'Лист из первого файла до map и функции clean:{string_polynomial_one}')
-string_polynomial_one = map(clean, string_polynomial_one)
+string_polynomial_one = map(clean, string_polynomial_one)   # Map - применение функции clean - к каждому итерируемому объёкту в данном случае string_polynomial_one
 string_polynomial_one = ' '.join(string_polynomial_one)
 string_polynomial_one = string_polynomial_one.split()
 
@@ -38,8 +38,10 @@ print(f'Лист из второго файла после map и функции
 complex_string = ''
 
 for item in zip(string_polynomial_one, string_polynomial_two):
-    if (item[0] != str(k) and item[1] != str(k)) and item[0] != '0':
-        complex_string += str(int(item[0]) + int(item[1])) + '+'
+    item2 = map(int, item)
+    if item2 != k or item2 != 0:
+        item2 = sum(item2)
+        complex_string += str(item2) + '+'
 
 complex_list = complex_string[0:-1].split('+')
 print(f' Сумма многочленов равна = {complex_list[0]}x^{k} + {complex_list[1]}x + {complex_list[2]} = 0')
