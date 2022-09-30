@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Иван",
+    "surname": "Лапин",
+    "telephone": "+7 983 341-32-11",
+    "description": "рабочий"
+  },
+  {
+    "name": "Иван",
+    "surname": "Смирнов",
+    "telephone": "+7 983 321-32-11",
+    "description": "рабочий"
+  },
+  {
+    "name": "Константин",
+    "surname": "Грачов",
+    "telephone": "+7 983 341-31-11",
+    "description": "рабочий"
+  },
+  {
+    "name": "Елена",
+    "surname": "Полякова",
+    "telephone": "+7 983 341-32-13",
+    "description": "рабочий"
+  }
+]

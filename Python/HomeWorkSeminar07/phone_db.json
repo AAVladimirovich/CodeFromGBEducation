@@ -1,0 +1,88 @@
+{
+  "peoples": [
+    {
+      "name": "Федот",
+      "surname": "Иванов",
+      "telephone": "+7 982 263-44-21",
+      "description": "рабочий"
+    },
+    {
+      "name": "Вася",
+      "surname": "Иванов",
+      "telephone": "+7 982 263-54-21",
+      "description": "рабочий"
+    },
+    {
+      "name": "Вася",
+      "surname": "Иванов",
+      "telephone": "+7 982 263-54-31",
+      "description": "рабочий"
+    },
+    {
+      "name": "аааа",
+      "surname": "ввфыв",
+      "telephone": "вфпып",
+      "description": "чвф"
+    },
+    {
+      "name": "Ватрёшка",
+      "surname": "Плюшевая",
+      "telephone": "+7 982 362-42-31",
+      "description": "домашний"
+    },
+    {
+      "name": "dklfjs",
+      "surname": "dga",
+      "telephone": "45345",
+      "description": "sdflkg"
+    },
+    {
+      "name": "dklfjs",
+      "surname": "dga",
+      "telephone": "45345",
+      "description": "sdflkg"
+    },
+    {
+      "name": "dklfjs",
+      "surname": "dga",
+      "telephone": "45345",
+      "description": "sdflkg"
+    },
+    {
+      "name": "dklfjs",
+      "surname": "dga",
+      "telephone": "45345",
+      "description": "sdflkg"
+    },
+    {
+      "name": "dklfjs",
+      "surname": "dga",
+      "telephone": "45345",
+      "description": "sdflkg"
+    },
+    {
+      "name": "Иван",
+      "surname": "Лапин",
+      "telephone": "+7 983 341-32-11",
+      "description": "рабочий"
+    },
+    {
+      "name": "Иван",
+      "surname": "Смирнов",
+      "telephone": "+7 983 321-32-11",
+      "description": "рабочий"
+    },
+    {
+      "name": "Константин",
+      "surname": "Грачов",
+      "telephone": "+7 983 341-31-11",
+      "description": "рабочий"
+    },
+    {
+      "name": "Елена",
+      "surname": "Полякова",
+      "telephone": "+7 983 341-32-13",
+      "description": "рабочий"
+    }
+  ]
+}
