@@ -1,5 +1,6 @@
 import random
 import re
+import os.path
 
 
 # функция определения числа, чётного или нет
@@ -214,6 +215,32 @@ def rle_decode(data):
             decode += char * int(count)
             count = ''
     return decode
+
+
+# функция для опроса по циклу
+def input_by_dictionary(arg_dictionary, arg_use_input_dict: bool = True):
+    if arg_use_input_dict:
+        dictionary = arg_dictionary
+    else:
+        dictionary = ['name', 'surname', 'telephone', 'description']
+    values_dictionary = {value: input(f'Укажите {value}') for value in dictionary}
+    return values_dictionary
+
+
+# функция проверки файла
+def is_file_exist(arg_filename):
+    if os.path.isfile(arg_filename):
+        return True
+    else:
+        return False
+
+
+# создание и проверка файла
+def create_file(arg_filename):
+    if not os.path.isfile(arg_filename):
+        with open(arg_filename, 'w', encoding='utf-8') as file:
+            file.close()
+
 
 # list comprehansion
 # [print(f' множитель числа {n} = {item} *') for item in answer_list if item > 5]
