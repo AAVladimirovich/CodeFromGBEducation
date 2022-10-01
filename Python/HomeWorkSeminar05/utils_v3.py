@@ -264,31 +264,8 @@ def create_file(arg_filename):
 # if type(hh.get_fractional_part(item)) is float:
 
 # мусорка. когда-нибудь разобрать
-# void Fibonacci(int in_num)
-# {
-#     int f1 = 0;
-#     int f2 = 1;
-#     int sum = 0;
-#     Console.Write($"{f1} {f2}");
+# print(data_read['peoples'][2]['telephone']) # HWS07 задача обращение к структуре Json и вообще структуре словаря.
+# print(data_read['peoples'][3]['description'])  # HWS07 задача обращение к структуре Json и вообще структуре словаря.
 #
-#     for (int i = 1; i <= in_num; i++)
-#     {
-#         sum = f1 + f2;
-#         f1 = f2;
-#         f2 = sum;
-#         Console.WriteLine($"F({i}) = {sum}");
-#     }
-# }
+#
 
-# #функция определения простых множителей числа
-# def pmc(arg_number):
-#     pmc_list = []
-#     while arg_number != 1:
-#         prime_list = sieve_list(arg_number)
-#         first_min_prime = False
-#         for current_prime in prime_list:
-#             if arg_number % current_prime == 0 and first_min_prime == False:
-#                 first_min_prime = True
-#                 pmc_list.append(current_prime)
-#                 pmc(arg_number / current_prime)
-#                 return pmc_list.append(current_prime)

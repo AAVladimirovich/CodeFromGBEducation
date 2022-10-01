@@ -47,22 +47,18 @@ def menu():
             data_read = reader.open_csv_file(csv_filename)
             writer.add_list_to_db(data_read, db_filename)
         if user_choice == '2':
-            field_name = (input(f"введите имя новой записи "))
-            field_surname = (input(f"введите фамилию новой записи "))
-            field_telephone = (input(f"введите телефон новой записи "))
-            field_description = (input(f"введите описание для телефона новой записи "))
-            writer.add_person_to_file(new_json_file, field_name, field_surname, field_telephone, field_description)
+            field_values = informator.input_by_dictionary(input_field_list)
+            writer.add_person_to_file(new_json_file, field_values['name'], field_values['surname'], field_values['telephone'], field_values['description'])
         if user_choice == '3':
             writer.add_file_to_db(new_json_file, db_filename)
         elif user_choice == '4':
-            field_name = (input(f"введите имя новой записи "))
-            field_surname = (input(f"введите фамилию новой записи "))
-            field_telephone = (input(f"введите телефон новой записи "))
-            field_description = (input(f"введите описание для телефона новой записи "))
-            writer.add_person_direct_to_db(db_filename, field_name, field_surname, field_telephone, field_description)
+            field_values = informator.input_by_dictionary(input_field_list)
+            writer.add_person_direct_to_db(db_filename, field_values['name'], field_values['surname'], field_values['telephone'], field_values['description'])
         elif user_choice == '5':
             data_read = reader.read_file_get_data(db_filename)
             informator.view_list('значение в базе', data_read['peoples'])
+            # print(data_read['peoples'][3]['telephone'])
+            # print(data_read['peoples'][2]['telephone'])
         elif user_choice == '6':
             data_read = reader.read_file_get_data(db_filename)
             field_input = (input(f"введите название поля по которому будем искать: {input_field_list} "))
