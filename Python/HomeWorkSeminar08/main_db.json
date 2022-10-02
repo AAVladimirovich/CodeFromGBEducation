@@ -1,0 +1,219 @@
+{
+  "main": [
+    {
+      "name": "Федотfd",
+      "surname": "Вивиков",
+      "address": "г. Москва, набережная, 9 - 44 кв",
+      "telephone": "+7 982 263-44-21",
+      "description": "рабочий",
+      "index": 0
+    },
+    {
+      "name": "Вася",
+      "surname": "Вивиков",
+      "address": "г. Москва, набережная, 9 - 44 кв",
+      "telephone": "+7 982 263-54-21",
+      "description": "рабочий",
+      "index": 1
+    },
+    {
+      "name": "Вася",
+      "surname": "Ивановец",
+      "address": "г. Петроград ул. Николая второго - 4 - 23 кв",
+      "telephone": "7 922 334 12 33",
+      "description": " работяга",
+      "index": 2
+    },
+    {
+      "name": "Иван",
+      "surname": "Лапин",
+      "address": "Грозный",
+      "telephone": "+7 983 341-32-11",
+      "description": "рабочий",
+      "index": 3
+    },
+    {
+      "name": "Иван",
+      "surname": "Смирнов",
+      "address": "Иваново",
+      "telephone": "+7 983 321-32-11",
+      "description": "рабочий",
+      "index": 4
+    },
+    {
+      "name": "Константин",
+      "surname": "Грачов",
+      "address": "Киров",
+      "telephone": "+7 983 341-31-11",
+      "description": "рабочий",
+      "index": 5
+    },
+    {
+      "name": "Елена",
+      "surname": "Полякова",
+      "address": "Москва",
+      "telephone": "+7 983 341-32-13",
+      "description": "рабочий",
+      "index": 6
+    },
+    {
+      "name": "Иван",
+      "surname": "Лапин",
+      "address": "Грозный",
+      "telephone": "+7 983 341-32-11",
+      "description": "рабочий",
+      "index": 7
+    },
+    {
+      "name": "Константин",
+      "surname": "Грачов",
+      "address": "Киров",
+      "telephone": "+7 983 341-31-11",
+      "description": "рабочий",
+      "index": 8
+    },
+    {
+      "name": "Елена",
+      "surname": "Полякова",
+      "address": "Москва",
+      "telephone": "+7 983 341-32-13",
+      "description": "рабочий",
+      "index": 9
+    },
+    {
+      "name": "виктор",
+      "surname": "огурцов",
+      "address": "Чернигов",
+      "telephone": "7 965 433 33 55",
+      "description": "сотрудник",
+      "index": 10
+    },
+    {
+      "name": "Иван",
+      "surname": "Лапин",
+      "address": "Грозный",
+      "telephone": "+7 983 341-32-11",
+      "description": "рабочий",
+      "index": 11
+    },
+    {
+      "name": "Иван",
+      "surname": "Смирнов",
+      "address": "Иваново",
+      "telephone": "+7 983 321-32-11",
+      "description": "рабочий",
+      "index": 12
+    },
+    {
+      "name": "Константин",
+      "surname": "Грачов",
+      "address": "Киров",
+      "telephone": "+7 983 341-31-11",
+      "description": "рабочий",
+      "index": 13
+    },
+    {
+      "name": "Елена",
+      "surname": "Полякова",
+      "address": "Москва",
+      "telephone": "+7 983 341-32-13",
+      "description": "рабочий",
+      "index": 14
+    },
+    {
+      "name": "Ксюша",
+      "surname": "Смирнова",
+      "address": "Иваново",
+      "telephone": "+7 983 341-33-12",
+      "description": "рабочий",
+      "index": 15
+    },
+    {
+      "name": "Мария",
+      "surname": "Иванова",
+      "address": "Москва",
+      "telephone": "+7 983 341-35-14",
+      "description": "рабочий",
+      "index": 16
+    },
+    {
+      "name": " Алёша",
+      "surname": "Амарнян",
+      "telephone": "7 983 244 24 51",
+      "description": "рабочий",
+      "index": 17
+    },
+    {
+      "name": "Макар",
+      "surname": "Данилов",
+      "address": "Екатеринбург",
+      "telephone": "8 983 452 55 23",
+      "description": "Медик",
+      "index": 18
+    },
+    {
+      "name": "Ваня",
+      "surname": "Пупанов",
+      "address": "Корея",
+      "telephone": "8 922 324 23 44",
+      "description": "осведомитель",
+      "index": 19
+    },
+    {
+      "name": "Иван",
+      "surname": "Лапин",
+      "address": "Грозный",
+      "telephone": "+7 983 341-32-11",
+      "description": "рабочий",
+      "index": 20
+    },
+    {
+      "name": "Иван",
+      "surname": "Смирнов",
+      "address": "Иваново",
+      "telephone": "+7 983 321-32-11",
+      "description": "рабочий",
+      "index": 21
+    },
+    {
+      "name": "Константин",
+      "surname": "Грачов",
+      "address": "Киров",
+      "telephone": "+7 983 341-31-11",
+      "description": "рабочий",
+      "index": 22
+    },
+    {
+      "name": "Елена",
+      "surname": "Полякова",
+      "address": "Москва",
+      "telephone": "+7 983 341-32-13",
+      "description": "рабочий",
+      "index": 23
+    },
+    {
+      "name": "Ксюша",
+      "surname": "Смирнова",
+      "address": "Иваново",
+      "telephone": "+7 983 341-33-12",
+      "description": "рабочий",
+      "index": 24
+    },
+    {
+      "name": "Дарья",
+      "surname": "Лапина",
+      "address": "Грозный",
+      "telephone": "+7 983 341-34-11",
+      "description": "рабочий",
+      "index": 25
+    },
+    {
+      "name": "Мария",
+      "surname": "Иванова",
+      "address": "Москва",
+      "telephone": "+7 983 341-35-14",
+      "description": "рабочий",
+      "index": 26
+    }
+  ]
+}
