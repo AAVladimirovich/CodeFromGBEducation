@@ -214,6 +214,14 @@
       "telephone": "+7 983 341-35-14",
       "description": "рабочий",
       "index": 26
+    },
+    {
+      "name": "Джон",
+      "surname": "Картер",
+      "address": "Новый Орлеан",
+      "telephone": "9 334 442 52 62",
+      "description": "военный",
+      "index": 27
     }
   ]
 }
