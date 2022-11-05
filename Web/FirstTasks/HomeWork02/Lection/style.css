@@ -1,0 +1,35 @@
+html{
+	font-size: 15px; /* px значит 'пиксели' : базовый шрифт будет 10 пикселей в высоту */
+	font-family: 'Roboto', sans-serif;
+background-color: #FFEFD5;
+}
+h1{
+	font-size: 100px;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	text-shadow: 2px 2px 2px white;
+	font-family: 'Roboto', sans-serif;
+}
+p, li{
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	text-shadow: 2px 2px 2px white;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	width: 600px;
+	margin: 0 auto;
+	background-color: #FFE485;
+	padding: 0 20px 20px 20px;
+	border: 2px solid white;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}

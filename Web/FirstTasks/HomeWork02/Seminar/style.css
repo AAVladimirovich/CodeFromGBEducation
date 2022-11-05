@@ -1,0 +1,122 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.header {
+    height: 200px;
+    background-color: #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+    font-size: 40px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(218, 109, 20);
+    /* margin-top: 40px;
+    margin-left: 40px; */
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-image: url(img/nb.webp);
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content {
+    background-color: rgb(131, 130, 180);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    height: 200px;
+    background-color: #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    font-size: 18px;
+    margin-top: 178px;
+    background-color: rgb(173, 125, 218);
+    border: 1px solid black;
+    border-radius: 0px 0px 0px 10px;
+}
+
+.button:hover{
+    background-color: rgb(85, 192, 13);
+    color:rgb(173, 125, 218);
+    border: 1px solid blue;
+}
+
+.footer-description{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+.footer-description:hover{
+    color: blue ;
+}
+
+/* это модификатор для класса content */
+.bg {
+    background-color: rgb(6, 139, 6);
+}
+
+.img {
+    /* width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-repeat: no-repeat; */
+    background-size: contain;
+    /* background-size: cover; */
+    background-image: none;
+}
+
+.item-pic{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+.abs {
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    z-index: 1000;
+}
