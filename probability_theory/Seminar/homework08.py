@@ -74,7 +74,8 @@ IQ = np.mean(IQ_izmerennoe)
 retrieve_var_value(IQ)
 D2 = np.var(IQ_izmerennoe, ddof=1)
 retrieve_var_value(D2)
-t2 = stats.t.ppf(0.95, 9)  # всего выборка 10, для высчитывания необходимо отнять 1 и того =9
+t2 = stats.t.ppf(0.975, 9)  # 0..975 = это поскольку для интервала мы отсекаем с каждой стороны по 0.025 или 2.5%
+# процента для статистической значимости 5%. всего выборка 10, для высчитывания необходимо отнять 1 и того =9
 retrieve_var_value(t2)
 low_x2 = IQ - t2 * np.sqrt(D2 / 10)
 retrieve_var_value(low_x2)
@@ -92,9 +93,11 @@ X3 = 174.2
 retrieve_var_value(X3)
 N3 = 27
 retrieve_var_value(N3)
-Sigma3 = 25
+dispersiya = 25
+retrieve_var_value(dispersiya)
+Sigma3 = np.sqrt(25) # отклонение корень из 25 незнаю сигма или нет пишется но решил дописать
 retrieve_var_value(Sigma3)
-low1 = X3 + (Z3 * (Sigma3 / np.sqrt(N3)))
+low1 = X3 - (Z3 * (Sigma3 / np.sqrt(N3)))
 retrieve_var_value(low1)
-up1 = X3 - (Z3 * (Sigma3 / np.sqrt(N3)))
+up1 = X3 + (Z3 * (Sigma3 / np.sqrt(N3)))
 retrieve_var_value(up1)
